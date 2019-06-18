@@ -1,23 +1,31 @@
-import React, {Component} from 'react';
+import React, {Component, Children} from 'react';
 
 class FavoriteMovies extends Component{
 	render(){
     	console.log(this.props);
+      
       	return(
           
-          <ol>
+          <p>
           {
             
-            this.props.profiles.map((profile)=>(
-          		<li key={profile.id}>
-					{profile.id}
-          			</li>
-        	))
+            this.props.profiles.map((profile)=>{
+         
+        return(
+          
+            
+          <span key={profile.id}>
+			{profile.id}
+            {this.props.users[profile.userID].userName};
+          </span>
+			
+        	)})
 			
             
           }
 
-          </ol>
+
+          </p>
         )
     }
 }
