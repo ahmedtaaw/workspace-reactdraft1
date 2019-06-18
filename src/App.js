@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import logo from './logo.svg';
+import FavoriteMovies from './FavoriteMovies';
 
 
 /*
@@ -102,11 +103,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <header className="App-header">
+          <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">ReactND - Coding Practice</h1>
         </header>
         <h2>Favorite Movies</h2>
+       <FavoriteMovies profiles={profiles} users={users}/>
       </div>
     );
   }
