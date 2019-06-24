@@ -1,32 +1,34 @@
-import React, {Component, Children} from 'react';
+import React, { Component, Children } from 'react';
 
-class FavoriteMovies extends Component{
-	render(){
-    	console.log(this.props);
-      
-      	return(
+class FavoriteMovies extends Component {
+  render() {
+    console.log(this.props);
+
+    return (
+
+      <ul>
+        {
+
+          this.props.profiles.map((profile) => {
+
+            return (
+
+
+              <li key={profile.id}>
+                {this.props.users[profile.userID].name}'s favorite movie is  {this.props.movies[profile.favoriteMovieID].name}
+
+              </li>
           
-          <p>
-          {
-            
-            this.props.profiles.map((profile)=>{
-         
-        return(
-          
-            
-          <span key={profile.id}>
-			{profile.id}
-            {this.props.users[profile.userID].userName};
-          </span>
-			
-        	)})
-			
-            
-          }
+
+            )
+          })
 
 
-          </p>
-        )
-    }
+        }
+
+
+      </ul>
+    )
+  }
 }
 export default FavoriteMovies;
