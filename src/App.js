@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import MovieCard from './MovieCard';
 
 /*
 Display a list of movies where each movie contains a list of users that favorited it.
@@ -106,9 +107,10 @@ class App extends Component {
           <h1 className="App-title">ReactND - Coding Practice</h1>
         </header>
         <h2>How Popular is Your Favorite Movie?</h2>
+        <MovieCard movies={movies} users={users} profiles={profiles} />
       </div>
     );
   }
-}
+} 
 
 export default App;
