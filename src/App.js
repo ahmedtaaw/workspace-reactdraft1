@@ -40,6 +40,11 @@ const profiles = [
     userID: '6',
     favoriteMovieID: '4',
   },
+  {
+    id: 7,
+    userID: '1',
+    favoriteMovieID: '5',
+  }
 ];
 
 const users = {
@@ -59,7 +64,7 @@ const users = {
     userName: 'user123',
   },
   4: {
-    id: 3,
+    id: 4,
     name: 'John Doe',
     userName: 'user123',
   },

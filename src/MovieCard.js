@@ -9,13 +9,13 @@ class MovieCard extends Component {
 
             <div>
                 {
-                    Object.keys(moviesdata.movies).map((e, i) => {
+                    Object.keys(moviesdata.movies).map((e1, i) => {
                         return (
                             <div key={i} >
-                                <h2>{moviesdata.movies[e].name}</h2><p>Liked By:</p>
-                                <ul>{
+                                <h2>{moviesdata.movies[e1].name}</h2><p>Liked By:</p>
+                                <ul>{ 
                                     moviesdata.profiles.map((profile) => {
-                                        if (profile.favoriteMovieID == moviesdata.movies[e].id) {
+                                        if (profile.favoriteMovieID == moviesdata.movies[e1].id) {
                                             return (
                                                 <li key={profile.id}>
                                                     {profile.userID}
